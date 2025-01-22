@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WAV File trim</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>WAV File trim</h1>
+    <input type="file" id="fileInput" accept=".wav">
+    <div class="scroll-container">
+    <div class="controls"><hr><hr>
+      <label>
+        Speed:<hr>
+        <input type="range" id="speedControl" min="0.5" max="2" step="0.1" value="1">
+      </label>
+      <label><hr>
+        Volume:<hr>
+        <input type="range" id="volumeControl" min="0" max="2" step="0.1" value="1">
+      </label><hr>
+      <label>
+        Trim Start (sec):<hr>
+        <input type="range" id="trimStartControl" min="0" max="0" step="0.1" value="0">
+      </label><hr>
+      <label>
+        Trim End (sec):<hr>
+        <input type="range" id="trimEndControl" min="0" max="0" step="0.1" value="0">
+      </label><hr>
+      <label>
+        Loop:
+        <input type="checkbox" id="loopControl">
+      </label><hr>
+      <button id="playButton" disabled>Play Trimmed</button>
+      <button id="saveButton" disabled>Save</button><hr>
+    </div>
+    </div>
+    <div class="parameters">
+      <p id="speedDisplay">Speed: 1x</p>
+      <p id="volumeDisplay">Volume: 100%</p>
+      <p id="trimDisplay">Trim Range: Full</p>
+    </div>
+    <canvas id="waveform"></canvas>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
